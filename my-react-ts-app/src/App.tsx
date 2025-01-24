@@ -7,6 +7,7 @@ import styles from './App.module.css'
 
 import { ITask } from "./interfaces/Task";
 import { useState } from "react"
+import Modal from "./components/Modal"
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
 
   return (
     <>
+    <Modal children={<TaskForm btnText="Editar Tarefa" taskList={taskList}/>} />
       <Header />
       <main className={styles.main}>
       <div>
